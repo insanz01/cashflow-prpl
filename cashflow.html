@@ -15,6 +15,23 @@
 
 <body>
   <div class="container">
+    <div class="my-3">
+      <h2 class="text-center">PT Manda Gendut</h2>
+      <h2 class="text-center">LAPORAN LABA (RUGI)</h2>
+      <h2 class="text-center">
+        <script>
+          let bulan = ["Januari", "Februari", "Maret", "April", "Mei", "Juni", "Juli", "Agustus", "September",
+            "Oktober",
+            "Nopember", "Desember"
+          ];
+          document.write(new Date().getDate());
+          document.write(' ');
+          document.write(bulan[new Date().getMonth()]);
+          document.write(' ');
+          document.write(new Date().getFullYear());
+        </script>
+      </h2>
+    </div>
     <div class="row py-5">
       <div class="col-2"></div>
       <div class="col-8 mb-8">
@@ -44,7 +61,7 @@
           </tbody>
           <tfooter class="info">
             <td><b>Jumlah Kas dari Kegiatan Usaha</b></td>
-            <td class="text-right"><b>Rp. 800000,-</b></td>
+            <td class="text-right"><b>Rp. 1000000,-</b></td>
           </tfooter>
         </table>
       </div>
@@ -104,7 +121,30 @@
       </div>
       <div class="col-2"></div>
     </div>
+    <div class="row py-5">
+      <div class="col-8"></div>
+      <div class="col-2">
+        <a class="btn btn-success btn-block" id="kembali" href="filter.html">Kembali</a>
+      </div>
+      <div class="col-2">
+        <button class="btn btn-primary btn-block" id="cetak" onclick="cetakCF()">Cetak Laporan</button>
+      </div>
+    </div>
   </div>
+
+  <script>
+    let cetak = document.getElementById("cetak");
+    let kembali = document.getElementById("kembali");
+    const cetakCF = () => {
+      cetak.setAttribute("hidden", true);
+      kembali.setAttribute("hidden", true);
+      setTimeout(function () {
+        window.print();
+        cetak.removeAttribute("hidden");
+        kembali.removeAttribute("hidden");
+      }, 1000);
+    }
+  </script>
 
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
