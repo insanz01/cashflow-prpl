@@ -20,10 +20,17 @@ $sql = mysqli_query($c, $q);
 
 <body>
     <div class="container-fluid">
-        <div class="row">
-            <div class="col-10"></div>
-            <div class="col-2">
-                <button class="btn btn-primary">Filter</button>
+        <div class="container py-4">
+            <div class="row">
+                <div class="col-4 mb-3">
+                    <input type="date" class="form-control" name="awal">
+                </div>
+                <div class="col-4 mb-3">
+                    <input type="date" class="form-control" name="akhir">
+                </div>
+                <div class="col-4 mb-3">
+                    <button class="btn btn-primary float-right">Cari berdasarkan filter</button>
+                </div>
             </div>
         </div>
         <div class="row">
