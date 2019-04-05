@@ -3,6 +3,7 @@
 # Clone Projek
 
 Manda nanti clone aja projek nya
+==================================================
 git clone git@github.com:insanz01/cashflow-prpl.git
 
 # Konfigurasi
